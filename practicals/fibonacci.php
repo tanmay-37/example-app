@@ -1,5 +1,5 @@
 <?php
-
+// Function to generate the Fibonacci sequence
 function generateFibonacci($n) {
     $fibonacciSequence = [0, 1];
     for ($i = 2; $i < $n; $i++) {
@@ -8,11 +8,11 @@ function generateFibonacci($n) {
     return $fibonacciSequence;
 }
 
-
+// Define the number of terms in the sequence
 $numberOfTerms = 10;
 $result = generateFibonacci($numberOfTerms);
 
-
+// Display the Fibonacci sequence
 echo "Fibonacci Sequence: ";
 for ($i = 0; $i < $numberOfTerms; $i++) {
     echo $result[$i];

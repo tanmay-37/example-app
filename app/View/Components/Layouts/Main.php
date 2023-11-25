@@ -27,7 +27,7 @@ class Main extends Component
     {
         if($this->pageName){
             $this->title = $this->title.' | '.$this->pageName;
-          }
+        }
         return view('components.layouts.main');
     }
 }

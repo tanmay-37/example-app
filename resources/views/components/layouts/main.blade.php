@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        <h1>Playlist Name</h1>
+        <h1>{{ isset($pageName) ? $pageName : 'Default Page' }}</h1>
         <p>Playlist Description or Information</p>
     </header>
 

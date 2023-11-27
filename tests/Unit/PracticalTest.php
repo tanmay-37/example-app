@@ -64,13 +64,12 @@ class PracticalTest extends TestCase
         $practical = new Practical();
         $practical->generateFibonacciSequence("4");
     }
-
-    // public function testFibonacciRejectsAlphabetString()
-    // {
-    //     $this->expectException(InvalidArgumentException::class);
-    //     $practical = new Practical();
-    //     $practical->generateFibonacciSequence("abc");
-    // }
+    
+    public function testFibonacciRejectsAlphabetString(): void
+    {
+        $this->expectException(InvalidArgumentException::class);
+        Practical::generateFibonacciSequence("abc");
+    }
 
     public function testFibonacciRejectsFloat()
     {

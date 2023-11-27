@@ -29,9 +29,19 @@ class Practical {
      * @return array An array containing the Fibonacci sequence
      */
     public static function generateFibonacciSequence($n) {
-        $fibonacciSequence = [0, 1];
+        if(!is_int($n))
+        {
+            throw new \InvalidArgumentException("Arguments must be Integer");
+        }
+        $fibonacciSequence = array();
+        if ($n >= 1) {
+            $fibonacciSequence[] = 0;
+        }
+        if ($n >= 2) {
+            $fibonacciSequence[] = 1;
+        }
         for ($i = 2; $i < $n; $i++) {
-            $fibonacciSequence[$i] = $fibonacciSequence[$i - 1] + $fibonacciSequence[$i - 2];
+            $fibonacciSequence[] = $fibonacciSequence[$i - 1] + $fibonacciSequence[$i - 2];
         }
         return $fibonacciSequence;
     }
